@@ -105,6 +105,7 @@ public class FrmRegistrarVenta extends javax.swing.JFrame {
         lblCasa = new javax.swing.JLabel();
         btModificar = new javax.swing.JButton();
         btQuitarSeleccion = new javax.swing.JButton();
+        btAtras3 = new javax.swing.JButton();
 
         btAtras.setText("ATRAS");
         btAtras.addActionListener(new java.awt.event.ActionListener() {
@@ -174,6 +175,13 @@ public class FrmRegistrarVenta extends javax.swing.JFrame {
             }
         });
 
+        btAtras3.setText("ATRAS");
+        btAtras3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btAtras3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -184,7 +192,10 @@ public class FrmRegistrarVenta extends javax.swing.JFrame {
                         .addGap(27, 27, 27)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 606, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btQuitarSeleccion)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(btQuitarSeleccion)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btAtras3))
                             .addComponent(jLabel5)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -233,7 +244,9 @@ public class FrmRegistrarVenta extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btQuitarSeleccion)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btQuitarSeleccion)
+                    .addComponent(btAtras3))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -295,6 +308,11 @@ public class FrmRegistrarVenta extends javax.swing.JFrame {
         limpiar();
     }//GEN-LAST:event_btQuitarSeleccionActionPerformed
 
+    private void btAtras3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAtras3ActionPerformed
+        this.setVisible(false);
+        new FrmPrincipal().setVisible(true);
+    }//GEN-LAST:event_btAtras3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -340,6 +358,7 @@ public class FrmRegistrarVenta extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btAtras;
+    private javax.swing.JButton btAtras3;
     private javax.swing.JButton btGuardar;
     private javax.swing.JButton btModificar;
     private javax.swing.JButton btQuitarSeleccion;
